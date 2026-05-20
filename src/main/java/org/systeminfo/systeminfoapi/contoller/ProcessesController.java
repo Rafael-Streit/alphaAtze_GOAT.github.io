@@ -2,6 +2,8 @@ package org.systeminfo.systeminfoapi.contoller;
 
 import com.example.systemmonitor.api.ProcessesApi;
 import com.example.systemmonitor.dto.ProcessInfo;
+import com.example.systemmonitor.dto.ProcessStartedResponse;
+import com.example.systemmonitor.dto.StartProcessRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.systeminfo.systeminfoapi.service.ProcessService;
@@ -41,5 +43,19 @@ public class ProcessesController implements ProcessesApi {
         }
 
         return ResponseEntity.notFound().build();
+    }
+
+    @Override
+    public ResponseEntity<ProcessStartedResponse>
+    startProcess(StartProcessRequest startProcessRequest) {
+
+        ProcessStartedResponse response =
+                processService.startProcess(
+                        startProcessRequest
+                );
+
+        return ResponseEntity
+                .status(201)
+                .body(response);
     }
 }

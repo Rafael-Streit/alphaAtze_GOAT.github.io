@@ -1,6 +1,8 @@
 package org.systeminfo.systeminfoapi.service;
 
 import com.example.systemmonitor.dto.ProcessInfo;
+import com.example.systemmonitor.dto.ProcessStartedResponse;
+import com.example.systemmonitor.dto.StartProcessRequest;
 import org.springframework.stereotype.Service;
 import oshi.SystemInfo;
 import oshi.software.os.OSProcess;
@@ -88,6 +90,31 @@ public class ProcessService {
 
         } catch (Exception e) {
             return false;
+        }
+    }
+    public ProcessStartedResponse startProcess(
+            StartProcessRequest request
+    ) {
+
+        try {
+
+            Process process =
+                    new ProcessBuilder(
+                            request.getCommand()
+                    ).start();
+
+            long pid = process.pid();
+
+            return new ProcessStartedResponse()
+                    .pid((int) pid)
+                    .command(request.getCommand())
+                    .status("STARTED");
+
+        } catch (Exception e) {
+
+            throw new RuntimeException(
+                    "Could not start process"
+            );
         }
     }
 }

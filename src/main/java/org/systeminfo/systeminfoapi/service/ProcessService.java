@@ -70,4 +70,24 @@ public class ProcessService {
 
         return result;
     }
+
+    public boolean killProcess(int pid) {
+
+        try {
+
+            Process process = new ProcessBuilder(
+                    "taskkill",
+                    "/PID",
+                    String.valueOf(pid),
+                    "/F"
+            ).start();
+
+            int exitCode = process.waitFor();
+
+            return exitCode == 0;
+
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

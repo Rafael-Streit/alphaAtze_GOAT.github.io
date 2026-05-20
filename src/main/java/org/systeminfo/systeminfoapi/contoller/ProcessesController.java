@@ -29,4 +29,17 @@ public class ProcessesController implements ProcessesApi {
                 processService.getProcesses()
         );
     }
+
+    @Override
+    public ResponseEntity<Void> killProcess(Integer pid) {
+
+        boolean killed =
+                processService.killProcess(pid);
+
+        if (killed) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.notFound().build();
+    }
 }

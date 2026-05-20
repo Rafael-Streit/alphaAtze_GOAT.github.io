@@ -1,0 +1,435 @@
+openapi: 3.0.3
+
+info:
+  title: System Monitor API
+  version: 1.0.0
+  description: |
+    REST API for monitoring and managing system resources,
+    processes, memory, CPU, disks and network information.
+
+servers:
+  - url: http://localhost:8080/api/v1
+    description: Local development server
+
+tags:
+  - name: System
+    description: General system information
+
+  - name: CPU
+    description: CPU monitoring endpoints
+
+  - name: Memory
+    description: Memory monitoring endpoints
+
+  - name: Disk
+    description: Disk monitoring endpoints
+
+  - name: Processes
+    description: Process management endpoints
+
+  - name: Network
+    description: Network monitoring endpoints
+
+paths:
+
+  /system:
+    get:
+      tags:
+        - System
+
+      summary: Get complete system overview
+      operationId: getSystemOverview
+
+      responses:
+        '200':
+          description: Complete system information
+
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SystemOverview'
+
+  /system/cpu:
+    get:
+      tags:
+        - CPU
+
+      summary: Get CPU information
+      operationId: getCpuInfo
+
+      responses:
+        '200':
+          description: CPU information
+
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CpuInfo'
+
+  /system/memory:
+    get:
+      tags:
+        - Memory
+
+      summary: Get memory information
+      operationId: getMemoryInfo
+
+      responses:
+        '200':
+          description: Memory information
+
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryInfo'
+
+  /system/disks:
+    get:
+      tags:
+        - Disk
+
+      summary: Get disk information
+      operationId: getDiskInfo
+
+      responses:
+        '200':
+          description: Disk information
+
+          content:
+            application/json:
+              schema:
+                type: array
+
+                items:
+                  $ref: '#/components/schemas/DiskInfo'
+
+  /system/network:
+    get:
+      tags:
+        - Network
+
+      summary: Get network information
+      operationId: getNetworkInfo
+
+      responses:
+        '200':
+          description: Network information
+
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NetworkInfo'
+
+
+  /processes:
+    get:
+      tags:
+        - Processes
+
+      summary: Get running processes
+      operationId: getProcesses
+
+      parameters:
+        - name: limit
+          in: query
+          required: false
+
+          schema:
+            type: integer
+            default: 10
+            minimum: 1
+
+        - name: sort
+          in: query
+          required: false
+
+          schema:
+            type: string
+
+            enum:
+              - cpu
+              - memory
+
+      responses:
+        '200':
+          description: Running processes
+
+          content:
+            application/json:
+              schema:
+                type: array
+
+                items:
+                  $ref: '#/components/schemas/ProcessInfo'
+
+    post:
+      tags:
+        - Processes
+
+      summary: Start a new process
+      operationId: startProcess
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StartProcessRequest'
+
+      responses:
+        '201':
+          description: Process started successfully
+
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProcessStartedResponse'
+
+        '400':
+          description: Invalid request
+
+  /processes/{pid}:
+    get:
+      tags:
+        - Processes
+
+      summary: Get process by PID
+      operationId: getProcessByPid
+
+      parameters:
+        - name: pid
+          in: path
+          required: true
+
+          schema:
+            type: integer
+
+      responses:
+        '200':
+          description: Process details
+
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProcessInfo'
+
+        '404':
+          description: Process not found
+
+    delete:
+      tags:
+        - Processes
+
+      summary: Kill a running process
+      operationId: killProcess
+
+      parameters:
+        - name: pid
+          in: path
+          required: true
+
+          schema:
+            type: integer
+
+      responses:
+        '204':
+          description: Process terminated successfully
+
+        '404':
+          description: Process not found
+
+components:
+
+  schemas:
+
+    SystemOverview:
+      type: object
+
+      properties:
+        hostname:
+          type: string
+          example: workstation-01
+
+        operatingSystem:
+          type: string
+          example: Windows 11
+
+        uptimeSeconds:
+          type: integer
+          format: int64
+          example: 123456
+
+        cpu:
+          $ref: '#/components/schemas/CpuInfo'
+
+        memory:
+          $ref: '#/components/schemas/MemoryInfo'
+
+        disks:
+          type: array
+
+          items:
+            $ref: '#/components/schemas/DiskInfo'
+
+        network:
+          $ref: '#/components/schemas/NetworkInfo'
+
+    CpuInfo:
+      type: object
+
+      properties:
+        usagePercent:
+          type: number
+          format: double
+          example: 21.4
+
+        physicalCores:
+          type: integer
+          example: 8
+
+        logicalCores:
+          type: integer
+          example: 16
+
+        frequencyHz:
+          type: integer
+          format: int64
+          example: 3600000000
+
+    MemoryInfo:
+      type: object
+
+      properties:
+        totalBytes:
+          type: integer
+          format: int64
+          example: 32000000000
+
+        usedBytes:
+          type: integer
+          format: int64
+          example: 12000000000
+
+        freeBytes:
+          type: integer
+          format: int64
+          example: 20000000000
+
+        usagePercent:
+          type: number
+          format: double
+          example: 37.5
+
+    DiskInfo:
+      type: object
+
+      properties:
+        name:
+          type: string
+          example:
+
+        totalBytes:
+          type: integer
+          format: int64
+          example: 1000000000000
+
+        usedBytes:
+          type: integer
+          format: int64
+          example: 450000000000
+
+        freeBytes:
+          type: integer
+          format: int64
+          example: 550000000000
+
+        usagePercent:
+          type: number
+          format: double
+          example: 45.0
+
+    ProcessInfo:
+      type: object
+
+      properties:
+        pid:
+          type: integer
+          example: 1234
+
+        name:
+          type: string
+          example: chrome.exe
+
+        status:
+          type: string
+          example: RUNNING
+
+        cpuUsagePercent:
+          type: number
+          format: double
+          example: 12.3
+
+        memoryBytes:
+          type: integer
+          format: int64
+          example: 1230000000
+
+        threadCount:
+          type: integer
+          example: 42
+
+    StartProcessRequest:
+      type: object
+
+      required:
+        - command
+
+      properties:
+        command:
+          type: string
+          example: notepad.exe
+
+    ProcessStartedResponse:
+      type: object
+
+      properties:
+        pid:
+          type: integer
+          example: 4321
+
+        command:
+          type: string
+          example: notepad.exe
+
+        status:
+          type: string
+          example: STARTED
+
+    NetworkInfo:
+      type: object
+
+      properties:
+        hostName:
+          type: string
+          example: workstation-01
+
+        ipv4:
+          type: string
+          example: 192.168.178.10
+
+        macAddress:
+          type: string
+          example: 00-1B-44-11-3A-B7
+
+        bytesSent:
+          type: integer
+          format: int64
+          example: 123456789
+
+        bytesReceived:
+          type: integer
+          format: int64
+          example: 987654321

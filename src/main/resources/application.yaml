@@ -4,9 +4,17 @@ spring:
 
 server:
   port: 8080
+  servlet:
+    context-path: /api/monitoring
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics
+        include: health,info
+
+  endpoint:
+    health:
+      show-details: always
+
+kind: Application

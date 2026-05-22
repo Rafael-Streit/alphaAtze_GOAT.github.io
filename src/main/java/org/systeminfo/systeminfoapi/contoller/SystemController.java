@@ -15,12 +15,14 @@ public class SystemController implements SystemApi {
     private final MemoryService memoryService;
     private final DiskService diskService;
     private final NetworkService networkService;
+    private final SystemService systemService;
 
-    public SystemController(CpuService cpuService, MemoryService memoryService, NetworkService networkService, DiskService diskService, ProcessService processService) {
+    public SystemController(CpuService cpuService, MemoryService memoryService, NetworkService networkService, DiskService diskService, SystemService systemService) {
         this.cpuService = cpuService;
         this.memoryService  = memoryService;
         this.diskService = diskService;
         this.networkService = networkService;
+        this.systemService = systemService;
     }
 
     @Override
@@ -51,6 +53,14 @@ public class SystemController implements SystemApi {
 
         return ResponseEntity.ok(
                 this.networkService.getNetworkInfo()
+        );
+    }
+
+    public ResponseEntity<SystemOverview>
+    getSystemOverview() {
+
+        return ResponseEntity.ok(
+                systemService.getSystemOverview()
         );
     }
 }

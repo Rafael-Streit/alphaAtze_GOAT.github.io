@@ -1,0 +1,7 @@
+services:
+  monitoring:
+    build: .
+    ports:
+      - "8080:8080"
+    mem_limit: 4g
+    cpus: 2.0

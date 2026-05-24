@@ -1,7 +1,7 @@
 package org.systeminfo.systeminfoapi.contoller;
 
-import com.example.systemmonitor.api.SystemApi;
-import com.example.systemmonitor.dto.*;
+
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.systeminfo.systeminfoapi.service.*;
@@ -9,7 +9,7 @@ import org.systeminfo.systeminfoapi.service.*;
 import java.util.List;
 
 @RestController
-public class SystemController implements SystemApi {
+public class SystemController implements com.example.systemmonitor.api.SystemApi {
 
     private final CpuService cpuService;
     private final MemoryService memoryService;
@@ -26,14 +26,14 @@ public class SystemController implements SystemApi {
     }
 
     @Override
-    public ResponseEntity<CpuInfo> getCpuInfo() {
+    public ResponseEntity<com.example.systemmonitor.dto.CpuInfo> getCpuInfo() {
         return ResponseEntity.ok(
                 cpuService.getCpuInfo()
         );
     }
 
     @Override
-    public ResponseEntity<MemoryInfo> getMemoryInfo() {
+    public ResponseEntity<com.example.systemmonitor.dto.MemoryInfo> getMemoryInfo() {
 
         return ResponseEntity.ok(
                 this.memoryService.getMemoryInfo()
@@ -41,7 +41,7 @@ public class SystemController implements SystemApi {
     }
 
     @Override
-    public ResponseEntity<List<DiskInfo>> getDiskInfo() {
+    public ResponseEntity<List<com.example.systemmonitor.dto.DiskInfo>> getDiskInfo() {
 
         return ResponseEntity.ok(
                 this.diskService.getDiskInfo()
@@ -49,14 +49,14 @@ public class SystemController implements SystemApi {
     }
 
     @Override
-    public ResponseEntity<List<NetworkInfo>> getNetworkInfo() {
+    public ResponseEntity<List<com.example.systemmonitor.dto.NetworkInfo>> getNetworkInfo() {
 
         return ResponseEntity.ok(
                 this.networkService.getNetworkInfo()
         );
     }
 
-    public ResponseEntity<SystemOverview>
+    public ResponseEntity<com.example.systemmonitor.dto.SystemOverview>
     getSystemOverview() {
 
         return ResponseEntity.ok(

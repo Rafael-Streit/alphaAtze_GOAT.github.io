@@ -1,6 +1,10 @@
 spring:
   application:
     name: system-monitor-api
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=100,expireAfterWrite=30s
 
 server:
   port: 8080
@@ -12,10 +16,36 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
-
+        include: health,info,metrics,prometheus
   endpoint:
     health:
       show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.systeminfo.systeminfoapi: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+  file:
+    name: logs/application.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 10
+
+api:
+  security:
+    enabled: true
+    apiKey: system-monitor-api-key-2024
+    publicEndpoints:
+      - /api/monitoring/health
+      - /api/monitoring/info
+      - /api/monitoring/metrics
+      - /api/monitoring/prometheus
 
 kind: Application

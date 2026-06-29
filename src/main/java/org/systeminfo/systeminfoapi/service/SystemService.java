@@ -1,10 +1,13 @@
 package org.systeminfo.systeminfoapi.service;
 
 import com.example.systemmonitor.dto.SystemOverview;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import oshi.SystemInfo;
 import oshi.software.os.OperatingSystem;
 
+@Slf4j
 @Service
 public class SystemService {
 
@@ -23,15 +26,20 @@ public class SystemService {
     private final SystemInfo systemInfo =
             new SystemInfo();
 
+    @Cacheable("systemOverview")
     public SystemOverview getSystemOverview() {
+        log.debug("Fetching system overview");
 
         OperatingSystem os =
                 systemInfo.getOperatingSystem();
 
-        return new SystemOverview()
-                .hostname(os.getNetworkParams().getHostName())
+        String hostname = os.getNetworkParams().getHostName();
+        long uptime = os.getSystemUptime();
+        
+        SystemOverview result = new SystemOverview()
+                .hostname(hostname)
                 .operatingSystem(os.toString())
-                .uptimeSeconds(os.getSystemUptime())
+                .uptimeSeconds(uptime)
                 .cpu(cpuService.getCpuInfo())
                 .memory(memoryService.getMemoryInfo())
                 .disks(diskService.getDiskInfo())
@@ -42,5 +50,8 @@ public class SystemService {
                                 .findFirst()
                                 .orElse(null)
                 );
+        
+        log.info("System Overview retrieved - Hostname: {}, Uptime: {}s", hostname, uptime);
+        return result;
     }
 }

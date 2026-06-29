@@ -1,6 +1,8 @@
 package org.systeminfo.systeminfoapi.service;
 
 import com.example.systemmonitor.dto.NetworkInfo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
@@ -9,12 +11,15 @@ import oshi.hardware.NetworkIF;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
 public class NetworkService {
 
     private final SystemInfo systemInfo = new SystemInfo();
 
+    @Cacheable("networkInfo")
     public List<NetworkInfo> getNetworkInfo() {
+        log.debug("Fetching network information");
 
         HardwareAbstractionLayer hardware =
                 systemInfo.getHardware();
@@ -44,8 +49,10 @@ public class NetworkService {
                             .bytesReceived(net.getBytesRecv());
 
             result.add(info);
+            log.debug("Network interface - Name: {}, IP: {}", net.getDisplayName(), ipv4);
         }
 
+        log.info("Network Info retrieved - {} interfaces found", result.size());
         return result;
     }
 }

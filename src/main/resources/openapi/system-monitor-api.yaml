@@ -3,6 +3,7 @@ openapi: 3.0.3
 info:
   title: System Monitor API
   version: 1.0.0
+
   description: |
     REST API for monitoring and managing system resources,
     processes, memory, CPU, disks and network information.

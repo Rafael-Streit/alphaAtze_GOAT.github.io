@@ -1,0 +1,545 @@
+2026-06-29T11:19:40.613+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Starting SystemInfoApiApplicationTests using Java 25.0.1 with PID 31612 (started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:19:40.616+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:19:40.617+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:19:42.381+02:00  INFO 31612 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:19:42.429+02:00  INFO 31612 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:19:43.512+02:00  INFO 31612 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:19:43.944+02:00  INFO 31612 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:7de2a364-9881-42f4-a15c-a06379612335 user=SA
+2026-06-29T11:19:43.946+02:00  INFO 31612 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:19:44.013+02:00  INFO 31612 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:19:44.112+02:00  INFO 31612 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:19:44.874+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:19:45.037+02:00  INFO 31612 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:7de2a364-9881-42f4-a15c-a06379612335]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 7DE2A364-9881-42F4-A15C-A06379612335/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:19:45.680+02:00  INFO 31612 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:19:45.695+02:00  INFO 31612 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:19:46.256+02:00  WARN 31612 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:19:47.623+02:00  WARN 31612 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 74792486-154e-447f-986b-4d88d8907f95
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:19:47.673+02:00  INFO 31612 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:19:48.009+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:19:48.331+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Started SystemInfoApiApplicationTests in 8.314 seconds (process running for 10.247)
+2026-06-29T11:19:48.470+02:00  WARN 31612 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:19:48.471+02:00  WARN 31612 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:19:49.268+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Fetching network information
+2026-06-29T11:19:49.567+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:19:49.568+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.570+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:19:49.571+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.572+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller, IP: 
+2026-06-29T11:19:49.574+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.575+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Virtual WiFi Filter Driver-0000, IP: 
+2026-06-29T11:19:49.578+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:19:49.579+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:19:49.580+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:19:49.581+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.583+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:19:49.584+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.586+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:19:49.588+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:19:49.589+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.590+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.591+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:19:49.600+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:19:49.609+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:19:49.621+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:19:49.632+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC, IP: 172.26.27.153
+2026-06-29T11:19:49.641+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter, IP: 
+2026-06-29T11:19:49.643+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2, IP: 
+2026-06-29T11:19:49.643+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network Info retrieved - 24 interfaces found
+2026-06-29T11:19:49.703+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Fetching disk information
+2026-06-29T11:19:50.091+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info - Mount: C:\, Usage: 62.11311737041325%
+2026-06-29T11:19:50.091+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info retrieved - 1 filesystems found
+2026-06-29T11:19:50.103+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Fetching processes list
+2026-06-29T11:19:50.756+02:00  WARN 31612 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Process in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:19:50.757+02:00  INFO 31612 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Process.
+2026-06-29T11:19:52.160+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Processes retrieved - Total: 50
+2026-06-29T11:19:52.182+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Fetching memory information
+2026-06-29T11:19:52.193+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Memory Info retrieved - Usage: 67.29573317192624%
+2026-06-29T11:19:52.203+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : Fetching system overview
+2026-06-29T11:19:52.254+02:00 DEBUG 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : Fetching CPU information
+2026-06-29T11:19:52.362+02:00  WARN 31612 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Processor Information in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:19:52.362+02:00  INFO 31612 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Processor Information.
+2026-06-29T11:19:53.615+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : CPU Info retrieved - Usage: 25.343617699936203%
+2026-06-29T11:19:53.617+02:00  INFO 31612 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : System Overview retrieved - Hostname: NVG_STANDALONE, Uptime: 613004s
+2026-06-29T11:19:53.722+02:00  INFO 31612 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:19:53.726+02:00  INFO 31612 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:19:53.728+02:00  INFO 31612 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:22:44.511+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Starting SystemInfoApiApplicationTests using Java 25.0.1 with PID 28756 (started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:22:44.514+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:22:44.516+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:22:46.114+02:00  INFO 28756 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:22:46.150+02:00  INFO 28756 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:22:47.111+02:00  INFO 28756 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:22:47.376+02:00  INFO 28756 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:06f74a5e-0415-4698-9a2c-0c28691bd240 user=SA
+2026-06-29T11:22:47.378+02:00  INFO 28756 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:22:47.420+02:00  INFO 28756 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:22:47.483+02:00  INFO 28756 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:22:48.113+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:22:48.227+02:00  INFO 28756 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:06f74a5e-0415-4698-9a2c-0c28691bd240]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 06F74A5E-0415-4698-9A2C-0C28691BD240/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:22:48.746+02:00  INFO 28756 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:22:48.758+02:00  INFO 28756 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:22:49.218+02:00  WARN 28756 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:22:50.430+02:00  WARN 28756 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 41b4b6cc-8fdd-4495-a694-59c9fab2a51d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:22:50.486+02:00  INFO 28756 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:22:50.798+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:22:51.106+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Started SystemInfoApiApplicationTests in 7.034 seconds (process running for 8.837)
+2026-06-29T11:22:51.194+02:00  WARN 28756 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:22:51.195+02:00  WARN 28756 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:22:51.719+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Fetching network information
+2026-06-29T11:22:51.934+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:22:51.936+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.937+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:22:51.938+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.939+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller, IP: 
+2026-06-29T11:22:51.941+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.942+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Virtual WiFi Filter Driver-0000, IP: 
+2026-06-29T11:22:51.944+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:22:51.946+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:22:51.948+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:22:51.949+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.951+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:22:51.953+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.955+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:22:51.956+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:22:51.958+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.959+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.961+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:22:51.971+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:22:51.973+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:22:51.975+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:22:51.977+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC, IP: 172.26.27.153
+2026-06-29T11:22:51.979+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter, IP: 
+2026-06-29T11:22:51.981+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2, IP: 
+2026-06-29T11:22:51.982+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network Info retrieved - 24 interfaces found
+2026-06-29T11:22:52.017+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Fetching disk information
+2026-06-29T11:22:52.345+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info - Mount: C:\, Usage: 62.11766502158022%
+2026-06-29T11:22:52.345+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info retrieved - 1 filesystems found
+2026-06-29T11:22:52.358+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Fetching processes list
+2026-06-29T11:22:52.910+02:00  WARN 28756 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Process in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:22:52.911+02:00  INFO 28756 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Process.
+2026-06-29T11:22:53.961+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Processes retrieved - Total: 50
+2026-06-29T11:22:53.981+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Fetching memory information
+2026-06-29T11:22:53.991+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Memory Info retrieved - Usage: 67.87856953735427%
+2026-06-29T11:22:53.999+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : Fetching system overview
+2026-06-29T11:22:54.039+02:00 DEBUG 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : Fetching CPU information
+2026-06-29T11:22:54.139+02:00  WARN 28756 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Processor Information in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:22:54.140+02:00  INFO 28756 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Processor Information.
+2026-06-29T11:22:55.317+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : CPU Info retrieved - Usage: 16.365668568739338%
+2026-06-29T11:22:55.318+02:00  INFO 28756 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : System Overview retrieved - Hostname: NVG_STANDALONE, Uptime: 613186s
+2026-06-29T11:22:55.430+02:00  INFO 28756 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:22:55.433+02:00  INFO 28756 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:22:55.436+02:00  INFO 28756 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:23:31.660+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Starting SystemInfoApiApplicationTests using Java 25.0.1 with PID 14740 (started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:23:31.663+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:23:31.664+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:23:33.408+02:00  INFO 14740 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:23:33.445+02:00  INFO 14740 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:23:34.408+02:00  INFO 14740 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:23:34.795+02:00  INFO 14740 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:907fc8e1-c786-48fc-98b7-62a9a9a4862c user=SA
+2026-06-29T11:23:34.799+02:00  INFO 14740 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:23:34.861+02:00  INFO 14740 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:23:34.959+02:00  INFO 14740 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:23:35.526+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:23:35.612+02:00  INFO 14740 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:907fc8e1-c786-48fc-98b7-62a9a9a4862c]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 907FC8E1-C786-48FC-98B7-62A9A9A4862C/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:23:36.042+02:00  INFO 14740 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:23:36.052+02:00  INFO 14740 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:23:36.498+02:00  WARN 14740 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:23:37.652+02:00  WARN 14740 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f68e432f-66ad-4220-a7ba-c98f4c2c0c58
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:23:37.697+02:00  INFO 14740 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:23:38.014+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:23:38.286+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Started SystemInfoApiApplicationTests in 7.19 seconds (process running for 10.024)
+2026-06-29T11:23:38.374+02:00  WARN 14740 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:23:38.375+02:00  WARN 14740 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:23:38.953+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Fetching network information
+2026-06-29T11:23:39.175+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:23:39.177+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.178+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:23:39.181+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.182+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller, IP: 
+2026-06-29T11:23:39.183+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.184+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Virtual WiFi Filter Driver-0000, IP: 
+2026-06-29T11:23:39.187+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:23:39.189+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:23:39.190+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:23:39.191+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.192+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:23:39.193+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.194+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:23:39.197+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:23:39.199+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.200+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.203+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:23:39.211+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:23:39.212+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:23:39.216+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:23:39.219+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC, IP: 172.26.27.153
+2026-06-29T11:23:39.221+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter, IP: 
+2026-06-29T11:23:39.226+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2, IP: 
+2026-06-29T11:23:39.227+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network Info retrieved - 24 interfaces found
+2026-06-29T11:23:39.263+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Fetching disk information
+2026-06-29T11:23:39.584+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info - Mount: C:\, Usage: 62.11994228714192%
+2026-06-29T11:23:39.586+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info retrieved - 1 filesystems found
+2026-06-29T11:23:39.594+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Fetching processes list
+2026-06-29T11:23:40.026+02:00  WARN 14740 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Process in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:23:40.027+02:00  INFO 14740 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Process.
+2026-06-29T11:23:41.140+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Processes retrieved - Total: 50
+2026-06-29T11:23:41.154+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Fetching memory information
+2026-06-29T11:23:41.164+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Memory Info retrieved - Usage: 65.30590616054013%
+2026-06-29T11:23:41.174+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : Fetching system overview
+2026-06-29T11:23:41.214+02:00 DEBUG 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : Fetching CPU information
+2026-06-29T11:23:41.338+02:00  WARN 14740 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Processor Information in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:23:41.339+02:00  INFO 14740 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Processor Information.
+2026-06-29T11:23:42.545+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : CPU Info retrieved - Usage: 33.56888429277261%
+2026-06-29T11:23:42.548+02:00  INFO 14740 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : System Overview retrieved - Hostname: NVG_STANDALONE, Uptime: 613233s
+2026-06-29T11:23:42.690+02:00  INFO 14740 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:23:42.695+02:00  INFO 14740 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:23:42.699+02:00  INFO 14740 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:24:07.105+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Starting SystemInfoApiApplicationTests using Java 25.0.1 with PID 35168 (started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:24:07.108+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:24:07.110+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:24:08.911+02:00  INFO 35168 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:24:08.948+02:00  INFO 35168 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:24:09.956+02:00  INFO 35168 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:24:10.274+02:00  INFO 35168 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e1503027-ff15-4448-a068-4590492a3fd5 user=SA
+2026-06-29T11:24:10.276+02:00  INFO 35168 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:24:10.320+02:00  INFO 35168 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:24:10.384+02:00  INFO 35168 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:24:10.902+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:24:10.992+02:00  INFO 35168 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:e1503027-ff15-4448-a068-4590492a3fd5]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: E1503027-FF15-4448-A068-4590492A3FD5/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:24:11.432+02:00  INFO 35168 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:24:11.442+02:00  INFO 35168 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:24:11.914+02:00  WARN 35168 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:24:13.037+02:00  WARN 35168 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 097278a4-5425-43ac-a6b4-bbaa1cac0572
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:24:13.085+02:00  INFO 35168 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:24:13.386+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:24:13.707+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Started SystemInfoApiApplicationTests in 7.324 seconds (process running for 9.424)
+2026-06-29T11:24:13.796+02:00  WARN 35168 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:24:13.796+02:00  WARN 35168 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:24:14.288+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Fetching network information
+2026-06-29T11:24:14.488+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:14.490+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.491+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:14.492+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.493+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller, IP: 
+2026-06-29T11:24:14.494+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.495+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Virtual WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:14.498+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:14.499+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:14.500+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:14.501+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.502+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:14.503+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.505+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:14.506+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:14.507+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.508+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.510+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:14.515+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:14.516+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:14.518+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:14.519+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC, IP: 172.26.27.153
+2026-06-29T11:24:14.521+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter, IP: 
+2026-06-29T11:24:14.523+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2, IP: 
+2026-06-29T11:24:14.523+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network Info retrieved - 24 interfaces found
+2026-06-29T11:24:14.550+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Fetching disk information
+2026-06-29T11:24:14.830+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info - Mount: C:\, Usage: 62.12002914659121%
+2026-06-29T11:24:14.831+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info retrieved - 1 filesystems found
+2026-06-29T11:24:14.841+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Fetching processes list
+2026-06-29T11:24:15.280+02:00  WARN 35168 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Process in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:24:15.281+02:00  INFO 35168 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Process.
+2026-06-29T11:24:16.388+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Processes retrieved - Total: 50
+2026-06-29T11:24:16.401+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Fetching memory information
+2026-06-29T11:24:16.410+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Memory Info retrieved - Usage: 64.7007759077716%
+2026-06-29T11:24:16.420+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : Fetching system overview
+2026-06-29T11:24:16.463+02:00 DEBUG 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : Fetching CPU information
+2026-06-29T11:24:16.574+02:00  WARN 35168 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Processor Information in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:24:16.575+02:00  INFO 35168 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Processor Information.
+2026-06-29T11:24:17.759+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : CPU Info retrieved - Usage: 25.871313672922252%
+2026-06-29T11:24:17.761+02:00  INFO 35168 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : System Overview retrieved - Hostname: NVG_STANDALONE, Uptime: 613269s
+2026-06-29T11:24:17.871+02:00  INFO 35168 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:24:17.876+02:00  INFO 35168 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:24:17.878+02:00  INFO 35168 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:24:39.873+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Starting SystemInfoApiApplicationTests using Java 25.0.1 with PID 31408 (started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:24:39.874+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:24:39.876+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:24:41.751+02:00  INFO 31408 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:24:41.794+02:00  INFO 31408 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:24:42.988+02:00  INFO 31408 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:24:43.410+02:00  INFO 31408 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e86de86b-b967-45d5-baba-62421d5e4548 user=SA
+2026-06-29T11:24:43.413+02:00  INFO 31408 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:24:43.482+02:00  INFO 31408 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:24:43.597+02:00  INFO 31408 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:24:44.597+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:24:44.855+02:00  INFO 31408 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:e86de86b-b967-45d5-baba-62421d5e4548]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: E86DE86B-B967-45D5-BABA-62421D5E4548/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:24:45.922+02:00  INFO 31408 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:24:45.940+02:00  INFO 31408 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:24:46.583+02:00  WARN 31408 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:24:48.280+02:00  WARN 31408 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8d88d89e-f98e-4539-aed5-6a2cc8f37a90
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:24:48.343+02:00  INFO 31408 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:24:48.777+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:24:49.152+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplicationTests      : Started SystemInfoApiApplicationTests in 9.73 seconds (process running for 11.544)
+2026-06-29T11:24:49.299+02:00  WARN 31408 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:24:49.300+02:00  WARN 31408 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:24:50.228+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Fetching network information
+2026-06-29T11:24:50.537+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:50.539+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.540+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:50.542+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.543+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek PCIe GbE Family Controller, IP: 
+2026-06-29T11:24:50.545+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.547+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Virtual WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:50.551+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:50.552+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:50.554+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:50.555+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.557+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:50.558+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.560+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:50.562+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:50.564+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.566+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.568+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000, IP: 
+2026-06-29T11:24:50.576+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-Npcap Packet Driver (NPCAP)-0000, IP: 
+2026-06-29T11:24:50.578+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000, IP: 
+2026-06-29T11:24:50.580+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000, IP: 
+2026-06-29T11:24:50.581+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Realtek 8852CE WiFi 6E PCI-E NIC, IP: 172.26.27.153
+2026-06-29T11:24:50.583+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter, IP: 
+2026-06-29T11:24:50.585+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network interface - Name: Microsoft Wi-Fi Direct Virtual Adapter #2, IP: 
+2026-06-29T11:24:50.585+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.s.service.NetworkService             : Network Info retrieved - 24 interfaces found
+2026-06-29T11:24:50.624+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Fetching disk information
+2026-06-29T11:24:51.031+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info - Mount: C:\, Usage: 62.120184805604296%
+2026-06-29T11:24:51.032+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.DiskService    : Disk Info retrieved - 1 filesystems found
+2026-06-29T11:24:51.045+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Fetching processes list
+2026-06-29T11:24:51.847+02:00  WARN 31408 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Process in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:24:51.848+02:00  INFO 31408 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Process.
+2026-06-29T11:24:53.382+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.s.service.ProcessService             : Processes retrieved - Total: 50
+2026-06-29T11:24:53.393+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Fetching memory information
+2026-06-29T11:24:53.405+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.MemoryService  : Memory Info retrieved - Usage: 64.12319592387735%
+2026-06-29T11:24:53.415+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : Fetching system overview
+2026-06-29T11:24:53.460+02:00 DEBUG 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : Fetching CPU information
+2026-06-29T11:24:53.591+02:00  WARN 31408 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Failed to locate performance object for Processor Information in the registry. Performance counters may be corrupt. Pdh call failed with error code 0xC0000BB8
+2026-06-29T11:24:53.592+02:00  INFO 31408 --- [system-monitor-api] [main] o.u.p.windows.PerfCounterWildcardQuery   : Disabling further attempts to query Processor Information.
+2026-06-29T11:24:54.815+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.CpuService     : CPU Info retrieved - Usage: 20.332664181244624%
+2026-06-29T11:24:54.818+02:00  INFO 31408 --- [system-monitor-api] [main] o.s.systeminfoapi.service.SystemService  : System Overview retrieved - Hostname: NVG_STANDALONE, Uptime: 613306s
+2026-06-29T11:24:54.952+02:00  INFO 31408 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:24:54.956+02:00  INFO 31408 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:24:54.959+02:00  INFO 31408 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:28:34.769+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Starting SystemInfoApiApplication using Java 25.0.1 with PID 35880 (C:\Udev\java\SystemInfoAPI\target\classes started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:28:34.772+02:00 DEBUG 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:28:34.773+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:28:36.159+02:00  INFO 35880 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:28:36.196+02:00  INFO 35880 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:28:37.184+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-29T11:28:37.234+02:00  INFO 35880 --- [system-monitor-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T11:28:37.234+02:00  INFO 35880 --- [system-monitor-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T11:28:37.333+02:00  INFO 35880 --- [system-monitor-api] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2499 ms
+2026-06-29T11:28:37.724+02:00  INFO 35880 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:28:38.065+02:00  INFO 35880 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:a21d691e-000c-447b-8596-451a9539ab41 user=SA
+2026-06-29T11:28:38.069+02:00  INFO 35880 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:28:38.123+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:28:38.197+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:28:38.805+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:28:38.914+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:a21d691e-000c-447b-8596-451a9539ab41]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: A21D691E-000C-447B-8596-451A9539AB41/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:28:39.477+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:28:39.490+02:00  INFO 35880 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:28:39.865+02:00  WARN 35880 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:28:40.814+02:00  WARN 35880 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4007fa1d-b7e7-47a3-a65e-02eeb278ec55
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:28:40.848+02:00  INFO 35880 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:28:41.062+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:28:41.269+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/api/monitoring'
+2026-06-29T11:28:41.286+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Started SystemInfoApiApplication in 7.213 seconds (process running for 8.352)
+2026-06-29T11:28:41.296+02:00  WARN 35880 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:28:41.296+02:00  WARN 35880 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:28:41.866+02:00  INFO 35880 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.a.c.c.C.[.[.[/api/monitoring]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T11:28:41.867+02:00  INFO 35880 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T11:28:41.870+02:00  INFO 35880 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-29T11:31:14.330+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T11:31:14.342+02:00  INFO 35880 --- [system-monitor-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T11:31:14.353+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:31:14.356+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:31:14.359+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:31:17.273+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Starting SystemInfoApiApplication using Java 25.0.1 with PID 31832 (C:\Udev\java\SystemInfoAPI\target\classes started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:31:17.276+02:00 DEBUG 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:31:17.278+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:31:18.648+02:00  INFO 31832 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:31:18.679+02:00  INFO 31832 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:31:19.469+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-29T11:31:19.485+02:00  INFO 31832 --- [system-monitor-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T11:31:19.486+02:00  INFO 31832 --- [system-monitor-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T11:31:19.572+02:00  INFO 31832 --- [system-monitor-api] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2232 ms
+2026-06-29T11:31:19.916+02:00  INFO 31832 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:31:20.169+02:00  INFO 31832 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d0d9a91d-fc89-4090-8f03-4ecb10303edc user=SA
+2026-06-29T11:31:20.171+02:00  INFO 31832 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:31:20.222+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:31:20.295+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:31:20.928+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:31:21.043+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:d0d9a91d-fc89-4090-8f03-4ecb10303edc]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: D0D9A91D-FC89-4090-8F03-4ECB10303EDC/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:31:21.639+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:31:21.651+02:00  INFO 31832 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:31:22.016+02:00  WARN 31832 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:31:23.080+02:00  INFO 31832 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:31:23.335+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:31:23.526+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/api/monitoring'
+2026-06-29T11:31:23.544+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Started SystemInfoApiApplication in 6.969 seconds (process running for 7.933)
+2026-06-29T11:31:23.554+02:00  WARN 31832 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:31:23.556+02:00  WARN 31832 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:31:24.080+02:00  INFO 31832 --- [system-monitor-api] [RMI TCP Connection(1)-172.26.27.153] o.a.c.c.C.[.[.[/api/monitoring]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T11:31:24.080+02:00  INFO 31832 --- [system-monitor-api] [RMI TCP Connection(1)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T11:31:24.087+02:00  INFO 31832 --- [system-monitor-api] [RMI TCP Connection(1)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-06-29T11:31:34.040+02:00  WARN 31832 --- [system-monitor-api] [http-nio-0.0.0.0-8080-exec-4] o.s.s.security.ApiKeyInterceptor         : Missing API Key for endpoint: /api/monitoring/error
+2026-06-29T11:31:34.048+02:00  WARN 31832 --- [system-monitor-api] [http-nio-0.0.0.0-8080-exec-4] o.s.s.exception.RestExeptionHandler      : Unauthorized access attempt: API Key is missing. Please provide X-API-Key header.
+2026-06-29T11:33:08.179+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T11:33:08.189+02:00  INFO 31832 --- [system-monitor-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T11:33:08.198+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:33:08.201+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:33:08.203+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:50:23.027+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Starting SystemInfoApiApplication using Java 25.0.1 with PID 36308 (C:\Udev\java\SystemInfoAPI\target\classes started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:50:23.031+02:00 DEBUG 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:50:23.032+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:50:24.678+02:00  INFO 36308 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:50:24.711+02:00  INFO 36308 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:50:25.606+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-29T11:50:25.646+02:00  INFO 36308 --- [system-monitor-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T11:50:25.646+02:00  INFO 36308 --- [system-monitor-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T11:50:25.729+02:00  INFO 36308 --- [system-monitor-api] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2617 ms
+2026-06-29T11:50:26.061+02:00  INFO 36308 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:50:26.342+02:00  INFO 36308 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:34aa9206-1fb2-4a37-92e0-93d08243200a user=SA
+2026-06-29T11:50:26.345+02:00  INFO 36308 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:50:26.389+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:50:26.467+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:50:27.087+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:50:27.195+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:34aa9206-1fb2-4a37-92e0-93d08243200a]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 34AA9206-1FB2-4A37-92E0-93D08243200A/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:50:27.704+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:50:27.716+02:00  INFO 36308 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:50:28.041+02:00  WARN 36308 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:50:29.012+02:00  INFO 36308 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:50:29.251+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:50:29.450+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/api/monitoring'
+2026-06-29T11:50:29.463+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Started SystemInfoApiApplication in 7.309 seconds (process running for 8.416)
+2026-06-29T11:50:29.472+02:00  WARN 36308 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:50:29.473+02:00  WARN 36308 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:50:30.134+02:00  INFO 36308 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.a.c.c.C.[.[.[/api/monitoring]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T11:50:30.135+02:00  INFO 36308 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T11:50:30.138+02:00  INFO 36308 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-29T11:54:36.240+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T11:54:36.253+02:00  INFO 36308 --- [system-monitor-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T11:54:36.265+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:54:36.269+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:54:36.272+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,6 +1,8 @@
 package org.systeminfo.systeminfoapi.service;
 
 import com.example.systemmonitor.dto.DiskInfo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import oshi.SystemInfo;
 import oshi.software.os.FileSystem;
@@ -9,12 +11,15 @@ import oshi.software.os.OSFileStore;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
 public class DiskService {
 
     private final SystemInfo systemInfo = new SystemInfo();
 
+    @Cacheable("diskInfo")
     public List<DiskInfo> getDiskInfo() {
+        log.debug("Fetching disk information");
 
         FileSystem fileSystem =
                 systemInfo.getOperatingSystem()
@@ -41,8 +46,10 @@ public class DiskService {
                     .usagePercent(usage);
 
             disks.add(diskInfo);
+            log.debug("Disk Info - Mount: {}, Usage: {}%", store.getMount(), usage);
         }
 
+        log.info("Disk Info retrieved - {} filesystems found", disks.size());
         return disks;
     }
 }

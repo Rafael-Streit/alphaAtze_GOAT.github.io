@@ -403,3 +403,143 @@ This generated password is for development use only. Your security configuration
 2026-06-29T11:24:54.952+02:00  INFO 31408 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-29T11:24:54.956+02:00  INFO 31408 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-06-29T11:24:54.959+02:00  INFO 31408 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:28:34.769+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Starting SystemInfoApiApplication using Java 25.0.1 with PID 35880 (C:\Udev\java\SystemInfoAPI\target\classes started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:28:34.772+02:00 DEBUG 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:28:34.773+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:28:36.159+02:00  INFO 35880 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:28:36.196+02:00  INFO 35880 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:28:37.184+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-29T11:28:37.234+02:00  INFO 35880 --- [system-monitor-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T11:28:37.234+02:00  INFO 35880 --- [system-monitor-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T11:28:37.333+02:00  INFO 35880 --- [system-monitor-api] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2499 ms
+2026-06-29T11:28:37.724+02:00  INFO 35880 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:28:38.065+02:00  INFO 35880 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:a21d691e-000c-447b-8596-451a9539ab41 user=SA
+2026-06-29T11:28:38.069+02:00  INFO 35880 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:28:38.123+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:28:38.197+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:28:38.805+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:28:38.914+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:a21d691e-000c-447b-8596-451a9539ab41]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: A21D691E-000C-447B-8596-451A9539AB41/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:28:39.477+02:00  INFO 35880 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:28:39.490+02:00  INFO 35880 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:28:39.865+02:00  WARN 35880 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:28:40.814+02:00  WARN 35880 --- [system-monitor-api] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4007fa1d-b7e7-47a3-a65e-02eeb278ec55
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-29T11:28:40.848+02:00  INFO 35880 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:28:41.062+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:28:41.269+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/api/monitoring'
+2026-06-29T11:28:41.286+02:00  INFO 35880 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Started SystemInfoApiApplication in 7.213 seconds (process running for 8.352)
+2026-06-29T11:28:41.296+02:00  WARN 35880 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:28:41.296+02:00  WARN 35880 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:28:41.866+02:00  INFO 35880 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.a.c.c.C.[.[.[/api/monitoring]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T11:28:41.867+02:00  INFO 35880 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T11:28:41.870+02:00  INFO 35880 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-29T11:31:14.330+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T11:31:14.342+02:00  INFO 35880 --- [system-monitor-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T11:31:14.353+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:31:14.356+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:31:14.359+02:00  INFO 35880 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:31:17.273+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Starting SystemInfoApiApplication using Java 25.0.1 with PID 31832 (C:\Udev\java\SystemInfoAPI\target\classes started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:31:17.276+02:00 DEBUG 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:31:17.278+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:31:18.648+02:00  INFO 31832 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:31:18.679+02:00  INFO 31832 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:31:19.469+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-29T11:31:19.485+02:00  INFO 31832 --- [system-monitor-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T11:31:19.486+02:00  INFO 31832 --- [system-monitor-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T11:31:19.572+02:00  INFO 31832 --- [system-monitor-api] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2232 ms
+2026-06-29T11:31:19.916+02:00  INFO 31832 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:31:20.169+02:00  INFO 31832 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d0d9a91d-fc89-4090-8f03-4ecb10303edc user=SA
+2026-06-29T11:31:20.171+02:00  INFO 31832 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:31:20.222+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:31:20.295+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:31:20.928+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:31:21.043+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:d0d9a91d-fc89-4090-8f03-4ecb10303edc]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: D0D9A91D-FC89-4090-8F03-4ECB10303EDC/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:31:21.639+02:00  INFO 31832 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:31:21.651+02:00  INFO 31832 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:31:22.016+02:00  WARN 31832 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:31:23.080+02:00  INFO 31832 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:31:23.335+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:31:23.526+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/api/monitoring'
+2026-06-29T11:31:23.544+02:00  INFO 31832 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Started SystemInfoApiApplication in 6.969 seconds (process running for 7.933)
+2026-06-29T11:31:23.554+02:00  WARN 31832 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:31:23.556+02:00  WARN 31832 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:31:24.080+02:00  INFO 31832 --- [system-monitor-api] [RMI TCP Connection(1)-172.26.27.153] o.a.c.c.C.[.[.[/api/monitoring]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T11:31:24.080+02:00  INFO 31832 --- [system-monitor-api] [RMI TCP Connection(1)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T11:31:24.087+02:00  INFO 31832 --- [system-monitor-api] [RMI TCP Connection(1)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-06-29T11:31:34.040+02:00  WARN 31832 --- [system-monitor-api] [http-nio-0.0.0.0-8080-exec-4] o.s.s.security.ApiKeyInterceptor         : Missing API Key for endpoint: /api/monitoring/error
+2026-06-29T11:31:34.048+02:00  WARN 31832 --- [system-monitor-api] [http-nio-0.0.0.0-8080-exec-4] o.s.s.exception.RestExeptionHandler      : Unauthorized access attempt: API Key is missing. Please provide X-API-Key header.
+2026-06-29T11:33:08.179+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T11:33:08.189+02:00  INFO 31832 --- [system-monitor-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T11:33:08.198+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:33:08.201+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:33:08.203+02:00  INFO 31832 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T11:50:23.027+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Starting SystemInfoApiApplication using Java 25.0.1 with PID 36308 (C:\Udev\java\SystemInfoAPI\target\classes started by NVG in C:\Udev\java\SystemInfoAPI)
+2026-06-29T11:50:23.031+02:00 DEBUG 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-29T11:50:23.032+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T11:50:24.678+02:00  INFO 36308 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T11:50:24.711+02:00  INFO 36308 --- [system-monitor-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2026-06-29T11:50:25.606+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-29T11:50:25.646+02:00  INFO 36308 --- [system-monitor-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T11:50:25.646+02:00  INFO 36308 --- [system-monitor-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T11:50:25.729+02:00  INFO 36308 --- [system-monitor-api] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2617 ms
+2026-06-29T11:50:26.061+02:00  INFO 36308 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T11:50:26.342+02:00  INFO 36308 --- [system-monitor-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:34aa9206-1fb2-4a37-92e0-93d08243200a user=SA
+2026-06-29T11:50:26.345+02:00  INFO 36308 --- [system-monitor-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T11:50:26.389+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T11:50:26.467+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T11:50:27.087+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T11:50:27.195+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:34aa9206-1fb2-4a37-92e0-93d08243200a]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 34AA9206-1FB2-4A37-92E0-93D08243200A/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T11:50:27.704+02:00  INFO 36308 --- [system-monitor-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T11:50:27.716+02:00  INFO 36308 --- [system-monitor-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:50:28.041+02:00  WARN 36308 --- [system-monitor-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T11:50:29.012+02:00  INFO 36308 --- [system-monitor-api] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-29T11:50:29.251+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-06-29T11:50:29.450+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/api/monitoring'
+2026-06-29T11:50:29.463+02:00  INFO 36308 --- [system-monitor-api] [main] o.s.s.SystemInfoApiApplication           : Started SystemInfoApiApplication in 7.309 seconds (process running for 8.416)
+2026-06-29T11:50:29.472+02:00  WARN 36308 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-29T11:50:29.473+02:00  WARN 36308 --- [system-monitor-api] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-29T11:50:30.134+02:00  INFO 36308 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.a.c.c.C.[.[.[/api/monitoring]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T11:50:30.135+02:00  INFO 36308 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T11:50:30.138+02:00  INFO 36308 --- [system-monitor-api] [RMI TCP Connection(3)-172.26.27.153] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-29T11:54:36.240+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T11:54:36.253+02:00  INFO 36308 --- [system-monitor-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T11:54:36.265+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T11:54:36.269+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T11:54:36.272+02:00  INFO 36308 --- [system-monitor-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

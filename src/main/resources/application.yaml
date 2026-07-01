@@ -5,6 +5,10 @@ spring:
     type: caffeine
     caffeine:
       spec: maximumSize=100,expireAfterWrite=30s
+  security:
+    user:
+      name: admin
+      password: admin123
 
 server:
   port: 8080
@@ -20,9 +24,9 @@ management:
   endpoint:
     health:
       show-details: always
-  metrics:
-    export:
-      prometheus:
+  prometheus:
+    metrics:
+      export:
         enabled: true
 
 logging:
